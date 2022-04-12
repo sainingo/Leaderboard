@@ -36,6 +36,7 @@ h1 {
   background-color: #fff;
   box-shadow: 2px 3px black;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .score-container {
@@ -46,7 +47,8 @@ h1 {
 }
 
 .score-container > p:nth-child(odd) {
-  background-color: gray;
+  background-color: lightgray;
+  padding: 3px;
 }
 
 .score-fields {
@@ -56,15 +58,16 @@ h1 {
 }
 
 .score-fields > input {
-  border: 2px solid black;
+  border: 3px solid black;
   padding: 5px;
 }
 
 .score-fields > button {
-  width: 40%;
+  width: 50%;
   align-self: flex-end;
   border: 2px solid black;
   padding: 5px;
   box-shadow: 2px 3px black;
   font-weight: 600;
+  cursor: pointer;
 }

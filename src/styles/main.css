@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 2.8rem;
+}
+
+.wrapper {
+    margin: 20px 60px;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-score {
+    display: flex;
+}
+
+.score-container {
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+}

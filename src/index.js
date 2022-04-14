@@ -12,12 +12,18 @@ submitScore.addEventListener('click', async () => {
     user: inputNameField.value,
     score: inputScoreField.value,
   };
-  const template = document.createElement('template');
-  template.innerHTML = `<p><span>${inputFields.user}: </span> ${inputFields.score}</p>`;
-  scoreContainer.appendChild(template.content);
-  await postApi(inputFields);
-  inputNameField.value = '';
-  inputScoreField.value = '';
+  if (inputNameField.value.trim() !== '' && inputScoreField.value.trim() !== '') {
+    const template = document.createElement('template');
+    template.innerHTML = `<p><span>${inputFields.user}: </span> ${inputFields.score}</p>`;
+    scoreContainer.style.display = 'block';
+    scoreContainer.appendChild(template.content);
+    await postApi(inputFields);
+    inputNameField.value = '';
+    inputScoreField.value = '';
+  } else {
+    /* eslint-disable */ 
+    alert('Please Enter Your Name and Score');
+  }
 });
 
 refreshButton.addEventListener('click', () => {
@@ -28,6 +34,7 @@ refreshButton.addEventListener('click', () => {
       data.result.forEach((post) => {
         const template = document.createElement('template');
         template.innerHTML += `<p><span>${post.user}: </span> ${post.score}</p>`;
+        scoreContainer.style.display = 'block';
         scoreContainer.appendChild(template.content);
       });
     });

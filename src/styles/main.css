@@ -5,14 +5,24 @@ body {
 }
 
 h1 {
-  margin: 20px;
+  margin: 20px 0 20px 200px;
   font-size: 2.8rem;
+}
+
+h1::after {
+  content: '';
+  width: 15rem;
+  height: 1px;
+  display: block;
+  background-color: #333;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .container {
   width: 80%;
-  margin: 0 auto;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: auto;
+  font-family: monospace;
 }
 
 .wrapper {
@@ -29,26 +39,31 @@ h1 {
 }
 
 .nav-score > button {
-  border: 2px solid black;
-  padding: 2px;
+  border: 2px solid rgb(59, 45, 45);
+  padding: 3px;
   width: 30%;
   height: 4%;
-  background-color: #fff;
-  box-shadow: 2px 3px black;
-  font-weight: 600;
+  background-color: rgb(10, 241, 2);
+  box-shadow: 2px 3px rgb(112, 48, 48);
+  font-weight: 700;
   cursor: pointer;
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
 }
 
 .score-container {
-  border: 2px solid black;
+  display: none;
+  border: 2px solid rgb(53, 52, 52);
   margin: 4px;
   padding: 5px;
   width: 20em;
+  border-radius: 4px;
 }
 
 .score-container > p:nth-child(odd) {
   background-color: lightgray;
   padding: 3px;
+  border-radius: 4px;
 }
 
 .score-fields {
@@ -60,6 +75,7 @@ h1 {
 .score-fields > input {
   border: 3px solid black;
   padding: 5px;
+  border-radius: 4px;
 }
 
 .score-fields > button {
@@ -67,7 +83,28 @@ h1 {
   align-self: flex-end;
   border: 2px solid black;
   padding: 5px;
-  box-shadow: 2px 3px black;
+  box-shadow: 2px 3px rgb(112, 48, 48);
   font-weight: 600;
   cursor: pointer;
+  border-radius: 6px;
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.nav-score > button:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid rgb(5, 221, 250);
+  box-shadow: 2px 2px rgb(20, 189, 152);
+}
+
+.score-fields > button:hover {
+  background-color: #fff;
+  color: blue;
+  border: 1px solid rgb(216, 13, 216);
+}
+
+span {
+  font-weight: 600;
+  font-size: 0.9rem;
 }
